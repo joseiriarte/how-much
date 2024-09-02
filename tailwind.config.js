@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        readerPro: ['Readex Pro', 'sans-serif'],
+        readexPro: ['Readex Pro', 'sans-serif'],
       },
     },
   },

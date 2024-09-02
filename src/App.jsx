@@ -104,7 +104,7 @@ export default function App() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center background text-neutral-50 font-readerPro font-normal'>
+    <div className='flex flex-col items-center justify-center background text-neutral-50 font-readexPro font-normal'>
       <Header />
       <Categories handleSubcategory={handleSubcategory} />
       <AmountForm
