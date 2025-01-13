@@ -1,6 +1,6 @@
 import { Card } from './Card';
 
-export const Total = ({ total, each, subtotals, initialSubtotals, deleteSubtotal, calculate }) => {
+export const Total = ({ total, each, subtotals, people, initialSubtotals, deleteSubtotal, calculate }) => {
   const totalSection = true;
 
   if (subtotals !== initialSubtotals) {
@@ -26,6 +26,8 @@ export const Total = ({ total, each, subtotals, initialSubtotals, deleteSubtotal
             <></>
           )}
         </ul>
+
+        <p className='mb-4 w-full'>Divided into {people}</p>
 
         <button
           onClick={() => calculate()}

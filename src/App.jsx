@@ -89,7 +89,7 @@ export default function App() {
     const section = document.getElementById('total-section');
     const newSubtotals = subtotals.map((subtotal) => Number(subtotal.amount));
     const newTotal = newSubtotals.reduce((sum, current) => sum + current);
-    const newEach = newTotal / parseInt(people);
+    const newEach = Math.round((newTotal / parseInt(people)) * 100) / 100;
     setTotal(newTotal);
     setEach(newEach);
     section?.scrollIntoView({ behavior: 'smooth' });
@@ -122,6 +122,7 @@ export default function App() {
         total={total}
         each={each}
         subtotals={subtotals}
+        people={people}
         initialSubtotals={initialSubtotals}
         deleteSubtotal={deleteSubtotal}
         calculate={calculate}
